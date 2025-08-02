@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Festival Events - Manyatta Festival</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('images/festbackground.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    .container {
+      padding: 40px 20px;
+      background-color: rgba(0, 0, 0, 0.65);
+      max-width: 1100px;
+      margin: auto;
+      border-radius: 12px;
+    }
+    h1, h2 {
+      text-align: center;
+      color: gold;
+    }
+    .intro {
+      text-align: center;
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    /* Event Cards */
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .event-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 12px;
+      transition: 0.3s;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+    }
+    .event-card:hover {
+      transform: translateY(-5px);
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    .event-card i {
+      font-size: 30px;
+      color: #FFD700;
+    }
+    .event-card h3 {
+      margin: 10px 0 5px;
+    }
+
+    /* Accordion */
+    .accordion {
+      background-color: #333;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      width: 100%;
+      text-align: left;
+      border: none;
+      outline: none;
+      transition: 0.4s;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+    .accordion.active, .accordion:hover {
+      background-color: #444;
+    }
+    .panel {
+      padding: 0 15px;
+      background-color: #222;
+      display: none;
+      overflow: hidden;
+      border-radius: 0 0 8px 8px;
+    }
+
+    /* Mini Gallery */
+    .mini-gallery {
+      margin: 40px 0;
+    }
+    .mini-gallery h2 {
+      margin-bottom: 10px;
+    }
+    .mini-gallery-images {
+      display: flex;
+      overflow-x: auto;
+      gap: 15px;
+    }
+    .mini-gallery-images img {
+      height: 120px;
+      border-radius: 8px;
+    }
+
+    /* Call to Action */
+    .cta {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .cta button {
+      padding: 12px 25px;
+      background-color: gold;
+      color: black;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      margin: 10px;
+      cursor: pointer;
+    }
+    .cta button:hover {
+      background-color: white;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Manyatta Festival Events</h1>
+    <p class="intro">
+      Experience the heartbeat of Samburu through unforgettable moments — cultural showcases, traditional games, fashion, peace dialogues, and more!
+    </p>
+
+    <h2>Featured Events</h2>
+    <div class="events-grid">
+      <div class="event-card">
+        <i class="fas fa-flag"></i>
+        <h3>Opening Ceremony</h3>
+        <p>Colorful welcome, traditional blessings, and festival kickoff.</p>
+      </div>
+      <div class="event-card">
+        <i class="fas fa-drum"></i>
+        <h3>Cultural Competitions</h3>
+        <p>Dance, singing, attire, and heritage expression contests.</p>
+      </div>
+      <div class="event-card">
+        <i class="fas fa-users"></i>
+        <h3>Youth Innovation Fair</h3>
+        <p>Youths showcase innovations, business ideas, and tech.</p>
+      </div>
+      <div class="event-card">
+        <i class="fas fa-female"></i>
+        <h3>Women Empowerment</h3>
+        <p>Talks and mentorship by women leaders.</p>
+      </div>
+      <div class="event-card">
+        <i class="fas fa-spa"></i>
+        <h3>Peace Dialogues</h3>
+        <p>Community roundtables, cultural exchange, and mediation.</p>
+      </div>
+      <div class="event-card">
+        <i class="fas fa-mask"></i>
+        <h3>Fashion Show</h3>
+        <p>Celebrate identity with beautiful cultural fashion.</p>
+      </div>
+    </div>
+<section class="glass-box">
+  <h2><i class="fas fa-calendar-day"></i> 3-Day Festival Schedule</h2>
+  <div style="overflow-x:auto;">
+    <table style="width:100%; border-collapse: collapse; color: #f0f0f0;">
+      <thead style="background: rgba(255, 215, 0, 0.2);">
+        <tr>
+          <th style="padding: 12px; border-bottom: 1px solid #ccc;">Day</th>
+          <th style="padding: 12px; border-bottom: 1px solid #ccc;">Activities</th>
+          <th style="padding: 12px; border-bottom: 1px solid #ccc;">Venue</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 12px;"><strong>Day 1</strong> – August 10, 2025</td>
+          <td style="padding: 12px;">
+            <ul style="margin: 0; padding-left: 20px;">
+              <li>Opening Ceremony</li>
+              <li>Cultural Parade</li>
+              <li>Youth Performances</li>
+              <li>Traditional Music & Dance</li>
+            </ul>
+          </td>
+          <td style="padding: 12px;">Festival Grounds</td>
+        </tr>
+        <tr>
+          <td style="padding: 12px;"><strong>Day 2</strong> – August 11, 2025</td>
+          <td style="padding: 12px;">
+            <ul style="margin: 0; padding-left: 20px;">
+              <li>Peace & Unity Dialogue</li>
+              <li>Cultural Exhibitions</li>
+              <li>Storytelling Sessions</li>
+              <li>Children’s Art Showcase</li>
+            </ul>
+          </td>
+          <td style="padding: 12px;">Festival Grounds</td>
+        </tr>
+        <tr>
+          <td style="padding: 12px;"><strong>Day 3</strong> – August 12, 2025</td>
+          <td style="padding: 12px;">
+            <ul style="margin: 0; padding-left: 20px;">
+              <li>Women & Artisan Fair</li>
+              <li>Final Cultural Performances</li>
+              <li>Awards & Recognition</li>
+              <li>Closing Ceremony</li>
+            </ul>
+          </td>
+          <td style="padding: 12px;">Festival Grounds</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+    <div class="mini-gallery">
+      <h2>Highlights from Previous Festivals</h2>
+      <div class="mini-gallery-images">
+        <img src="images/openingceremony1.jpg" alt="Opening Ceremony"/>
+        <img src="images/culture1.jpg" alt="Cultural Event"/>
+        <img src="images/games.jpg" alt="Games"/>
+        <img src="images/expo.jpg" alt="Expo"/>
+      </div>
+    </div>
+
+    <div class="cta">
+      <p>Mark your calendar — be part of the experience!</p>
+      <button>Contact Organizers</button>
+    </div>
+  </div>
+
+  <script>
+    const acc = document.querySelectorAll(".accordion");
+    acc.forEach(btn => {
+      btn.addEventListener("click", function() {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+</body>
+</html>

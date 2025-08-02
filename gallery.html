@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery - Manyatta Festival</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f8f8f8;
+    }
+
+    h2 {
+      text-align: center;
+      color: #C29200;
+      margin-top: 40px;
+    }
+
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .gallery-item {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .gallery-item h3 {
+      padding: 10px;
+      font-size: 1.1em;
+      color: #444;
+    }
+
+    /* Samburu Adventures Slideshow */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: 40px auto;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .slide {
+      display: none;
+      position: relative;
+      animation: fade 1.5s ease-in-out;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .slide-text {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      width: 100%;
+      padding: 15px;
+      text-align: left;
+    }
+
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 12px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.3s;
+      border-radius: 0 3px 3px 0;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    @keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+
+    @media (max-width: 600px) {
+      .slide-text {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Festival Highlights Gallery</h2>
+  <section class="gallery-container">
+    <div class="gallery-item">
+      <img src="images/openingceremony.jpg" alt="Opening Ceremony">
+      <h3>Opening Ceremony</h3>
+    </div>
+    <div class="gallery-item">
+      <img src="images/craft.jpg" alt="Craft Showcase">
+      <h3>Craft Showcase</h3>
+    </div>
+    <div class="gallery-item">
+      <img src="images/womenempowerment.jpg" alt="Women Empowerment">
+      <h3>Women Empowerment</h3>
+    </div>
+    <div class="gallery-item">
+      <img src="images/football.jpg" alt="Games - Football">
+      <h3>Games</h3>
+    </div>
+    <div class="gallery-item">
+      <img src="images/traditional dance.jpg" alt="Traditional Dance">
+      <h3>Traditional Dance</h3>
+    </div>
+  </section>
+
+  <h2>Samburu Adventures</h2>
+  <div class="slideshow-container">
+    <div class="slide fade">
+      <img src="images/buffalosprings.jpg" alt="Buffalo Springs National Reserve">
+      <div class="slide-text">
+        <h3>Buffalo Springs National Reserve</h3>
+        <p>A haven for wildlife lovers with lions, elephants, and Grevy’s zebras along the Ewaso Nyiro River.</p>
+      </div>
+    </div>
+
+    <div class="slide fade">
+      <img src="images/samburureserve.jpg" alt="Samburu Lodge">
+      <div class="slide-text">
+        <h3>Samburu Lodge</h3>
+        <p>Iconic riverside lodge offering a unique blend of luxury and wilderness in Samburu heartland.</p>
+      </div>
+    </div>
+
+    <div class="slide fade">
+      <img src="images/shaba.jpg" alt="Shaba National Reserve">
+      <div class="slide-text">
+        <h3>Shaba National Reserve</h3>
+        <p>Famous for dramatic scenery, endangered species, and Elsa’s story from Born Free.</p>
+      </div>
+    </div>
+
+    <div class="slide fade">
+      <img src="images/ololokwe.jpg" alt="Mt. Ololokwe">
+      <div class="slide-text">
+        <h3>Mt. Ololokwe</h3>
+        <p>Sacred mountain with panoramic hiking trails and spiritual significance to the Samburu people.</p>
+      </div>
+    </div>
+
+    <div class="slide fade">
+      <img src="images/reteti.jpg" alt="Reteti Elephant Sanctuary">
+      <div class="slide-text">
+        <h3>Reteti Elephant Sanctuary</h3>
+        <p>Community-run haven for orphaned elephants, symbolizing conservation and Samburu compassion.</p>
+      </div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      const slides = document.getElementsByClassName("slide");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 5000); // Change image every 5 seconds
+    }
+
+    function plusSlides(n) {
+      slideIndex += n - 1;
+      showSlides();
+    }
+  </script>
+
+</body>
+</html>

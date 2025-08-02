@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Themes - Manyatta Festival</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('images/festbackground.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px 20px;
+    }
+
+    header img {
+      height: 60px;
+      max-width: 100%;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: gold;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    h1 {
+      text-align: center;
+      color: gold;
+      font-size: 2.2em;
+      margin-top: 30px;
+    }
+
+    .glass-section {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.65);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.2);
+    }
+
+    .glass-section > p {
+      text-align: center;
+      font-size: 1.1em;
+      margin-bottom: 40px;
+    }
+
+    .theme-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .theme-box {
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 18px rgba(255, 215, 0, 0.1);
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease;
+    }
+
+    .theme-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+    }
+
+    .theme-box i {
+      font-size: 2.2em;
+      color: #FFD700;
+      margin-bottom: 10px;
+    }
+
+    .theme-box h3 {
+      color: #FFD700;
+      margin: 10px 0;
+      font-size: 1.2em;
+    }
+
+    .theme-box ul {
+      list-style: disc;
+      text-align: left;
+      margin-top: 10px;
+      padding-left: 20px;
+      font-size: 0.95em;
+      color: #f0f0f0;
+    }
+
+    .cta {
+      text-align: center;
+      font-size: 1.1em;
+      font-weight: bold;
+      margin-top: 50px;
+      color: #ffde59;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 15px;
+      color: #ccc;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media screen and (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+      }
+
+      nav ul {
+        flex-direction: row;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .theme-box ul {
+        font-size: 0.9em;
+      }
+
+      .glass-section {
+        margin: 20px;
+        padding: 15px;
+      }
+
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .theme-box {
+        padding: 15px;
+      }
+
+      .theme-box i {
+        font-size: 1.8em;
+      }
+
+      .theme-box h3 {
+        font-size: 1em;
+      }
+
+      .theme-box ul {
+        font-size: 0.85em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/countysamburu.jpg" alt="Samburu County Logo">
+    <img src="images/manyattalogo.jpg" alt="Manyatta Festival Logo">
+  </header>
+
+  <section class="glass-section">
+    <h1>Festival Theme</h1>
+    <p><strong>Buy Samburu, Build Samburu</strong> — Empowering our county through local commerce, culture, and creativity.</p>
+
+    <div class="theme-grid">
+      <div class="theme-box">
+        <i class="fas fa-store"></i>
+        <h3>Samburu Marketplace</h3>
+        <ul>
+          <li>Showcasing local artisan goods</li>
+          <li>Women & youth enterprise booths</li>
+          <li>Traditional foods & services</li>
+          <li>Wild Samburu Adventures</li>
+        </ul>
+      </div>
+
+      <div class="theme-box">
+        <i class="fas fa-masks-theater"></i>
+        <h3>Cultural Competitions</h3>
+        <ul>
+          <li>Dance, dress, and music contests</li>
+          <li>Poetry & storytelling in dialects</li>
+          <li>Drama performances</li>
+          <li>Mr & Miss Manyatta Festival</li>
+        </ul>
+      </div>
+
+      <div class="theme-box">
+        <i class="fas fa-dice"></i>
+        <h3>Traditional Games</h3>
+        <ul>
+          <li>Spear throwing, wrestling, tug of war</li>
+          <li>Community team games</li>
+          <li>Board & indigenous games</li>
+          <li>Sports & Athletics Competitions</li>
+        </ul>
+      </div>
+
+      <div class="theme-box">
+        <i class="fas fa-lightbulb"></i>
+        <h3>Innovation & Workshops</h3>
+        <ul>
+          <li>Beadwork, weaving & crafts</li>
+          <li>Youth skills booths</li>
+          <li>Interactive cultural learning</li>
+        </ul>
+      </div>
+
+      <div class="theme-box">
+        <i class="fas fa-award"></i>
+        <h3>Awards & Recognition</h3>
+        <ul>
+          <li>Best Cultural Troupe</li>
+          <li>Young Innovator of the Year</li>
+          <li>Women Empowerment Champion</li>
+          <li>Many more Titles and Prizes</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="cta">
+      Every purchase, performance, and participation is part of a bigger mission — <br><strong>Buy Samburu. Build Samburu.</strong>
+    </p>
+  </section>
+
+  <footer>
+    © 2025 Manyatta Festival. All Rights Reserved. | Contact: info@manyattafestival.org
+  </footer>
+</body>
+</html>

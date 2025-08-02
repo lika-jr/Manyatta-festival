@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manyatta Festival</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('images/festbackground.jpg') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+      color: #fff;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for better readability */
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .overlay-box {
+      background-color: rgba(0, 0, 0, 0.55);
+      padding: 20px;
+      border-radius: 15px;
+      margin: 20px auto;
+      max-width: 1000px;
+    }
+
+    .navbar {
+      background-color: rgba(0, 100, 0, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      flex-wrap: wrap;
+    }
+
+    .navbar img {
+      height: 60px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: rgb(243, 211, 8);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: gold;
+      transform: scale(1.05);
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 10px;
+    }
+
+    header h1 {
+      font-size: 3em;
+      color:gold;
+      margin: 0;
+    }
+
+    .description {
+      font-size: 1.2em;
+      text-align: center;
+    }
+
+    .countdown {
+      font-size: 2em;
+      text-align: center;
+      color: gold;
+    }
+
+    .countdown span.days {
+      color: #ffcc00;
+      font-weight: bold;
+    }
+
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px 0;
+    }
+
+    .pillar {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 2px solid gold;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .pillar:hover {
+      transform: translateY(-5px);
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .pillar i {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: gold;
+    }
+
+    .pillar h3 {
+      color: gold;
+      margin-bottom: 10px;
+    }
+
+    .location-section {
+      text-align: center;
+      font-size: 1.2em;
+      padding: 20px;
+      background-color: rgba(146, 148, 146, 0.6);
+      color: #fff;
+      font-weight: 500;
+      margin-top: 40px;
+    }
+
+    .cta-buttons {
+      text-align: center;
+      margin: 30px auto;
+    }
+
+    .cta-buttons a button {
+      padding: 12px 24px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .cta-buttons a button:hover {
+      transform: scale(1.05);
+    }
+
+    .btn-yellow {
+      background-color: #FFD700;
+      color: black;
+    }
+
+    .btn-orange {
+      background-color: #FFA500;
+      color: white;
+    }
+
+    .btn-red {
+      background-color: #DC143C;
+      color: white;
+    }
+
+    footer {
+      background-color: rgba(0, 60, 0, 0.9);
+      text-align: center;
+      padding: 20px;
+      font-size: 0.95em;
+      color: #eee;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav-links {
+        justify-content: center;
+        margin-top: 10px;
+      }
+
+      .pillar i {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <img src="images/countysamburu.jpg" alt="Samburu County Logo" />
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="about.html">About</a>
+      <a href="themes.html">Themes</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="event.html">Events</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <img src="images/manyattalogo.jpg" alt="Manyatta Festival Logo" />
+  </div>
+
+  <!-- Header -->
+  <header>
+    <h1>Manyatta Festival</h1>
+    <p><strong><span style="color: #FFD700;">Buy Samburu</span>, <span style="color: hsl(120, 67%, 96%);">Build Samburu</span></strong></p>
+  </header>
+
+  <!-- Description & Countdown inside overlay -->
+  <div class="overlay-box">
+    <div class="description">
+      <p>The Manyatta festival "Buy Samburu, Build Samburu," is a vibrant celebration of the local culture, entrepreneurship, and community pride. The festival has seen growing popularity since its launch in 2024 and has become one of Samburu's most dynamic annual events.</p>
+    </div>
+
+    <!-- Countdown -->
+    <div class="countdown">
+      Starting in: <span id="countdown"><span class="days">0</span>d 0h 0m 0s</span>
+    </div>
+  </div>
+
+ <!-- Festival Pillars -->
+<h2 style="text-align: center; color: gold; margin-bottom: 20px;">Our Core Pillars</h2>
+<section class="pillars">
+  <div class="pillar">
+    <i class="fas fa-handshake fa-3x" style="color: #FFD700;"></i>
+    <h3>Peace Building</h3>
+    <p>Fostering harmony and unity through dialogue, art, and tradition.</p>
+  </div>
+  <div class="pillar">
+    <i class="fas fa-chart-line fa-3x" style="color: #FFD700;"></i>
+    <h3>Empowerment</h3>
+    <p>Equipping women and youth with tools for economic and social success.</p>
+  </div>
+  <div class="pillar">
+    <i class="fas fa-user-friends fa-3x" style="color: #FFD700;"></i>
+    <h3>Cultural Heritage</h3>
+    <p>Celebrating and preserving the rich traditions of the Samburu people.</p>
+  </div>
+  <div class="pillar">
+    <i class="fas fa-lightbulb fa-3x" style="color: #FFD700;"></i>
+    <h3>Innovation</h3>
+    <p>Exploring new ideas and sustainable practices for the future.</p>
+  </div>
+</section>
+<section style="background: rgba(255, 255, 255, 0.05); padding: 40px 20px; text-align: center;">
+  <h2 style="color: gold; font-size: 2em; margin-bottom: 30px;">Words of Support from Our Leaders</h2>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+
+    <!-- Governor's Message -->
+    <div style="background: rgba(0, 0, 0, 0.6); border-radius: 15px; padding: 20px; max-width: 350px; text-align: center; color: white; box-shadow: 0 0 10px rgba(0,0,0,0.4);">
+      <img src="images/Govlati.jpg" alt="Governor" style="width: 100%; border-radius: 10px; height: auto;">
+      <h3 style="color: gold; margin-top: 15px;">H.E. Governor of Samburu County</h3>
+      <p style="margin-top: 10px;">
+        “The Manyatta Festival is a celebration of who we are — a proud, united people with rich traditions and limitless potential. 
+        As your Governor, I am honored to support our youth and women, who continue to shape a brighter future for Samburu.”
+      </p>
+    </div>
+
+    <!-- Naisula's Message -->
+    <div style="background: rgba(0, 0, 0, 0.6); border-radius: 15px; padding: 20px; max-width: 350px; text-align: center; color: white; box-shadow: 0 0 10px rgba(0,0,0,0.4);">
+      <img src="images/naisulafest.jpg" alt="Hon. Naisula Lesuuda" style="width: 100%; border-radius: 10px; height: auto;">
+      <h3 style="color: gold; margin-top: 15px;">Hon. Naisula Lesuuda, MP</h3>
+      <p style="margin-top: 10px;">
+        “Empowering young people and preserving our culture go hand in hand. I stand with the youth of Samburu as they showcase 
+        their talent, resilience, and dreams through this powerful festival. Together, we rise.”
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- Location -->
+  <div class="location-section">
+    <p>📍 Location: <strong>Yare Camel Camp, Maralal, Samburu County, Kenya</strong></p>
+  </div>
+
+  <!-- Call to Action Buttons -->
+  <div class="overlay-box cta-buttons">
+    <a href="#tickets"><button class="btn-yellow"><i class="fas fa-ticket-alt"></i> Buy Ticket</button></a>
+    <a href="#partner"><button class="btn-orange"><i class="fas fa-handshake"></i> Partner With Us</button></a>
+    <a href="#shop"><button class="btn-red"><i class="fas fa-store"></i> Shop Samburu</button></a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Manyatta Festival. All Rights Reserved. <br>
+    Contact: info@manyattafestival.org
+  </footer>
+
+  <!-- Countdown Script -->
+  <script>
+    const countdown = () => {
+      const eventDate = new Date("August 8, 2025 00:00:00").getTime();
+      const now = new Date().getTime();
+      const gap = eventDate - now;
+
+      const day = 1000 * 60 * 60 * 24;
+      const hour = 1000 * 60 * 60;
+      const minute = 1000 * 60;
+
+      const days = Math.floor(gap / day);
+      const hours = Math.floor((gap % day) / hour);
+      const minutes = Math.floor((gap % hour) / minute);
+      const seconds = Math.floor((gap % minute) / 1000);
+
+      document.getElementById("countdown").innerHTML =
+        `<span class="days">${days}</span>d ${hours}h ${minutes}m ${seconds}s`;
+    };
+
+    setInterval(countdown, 1000);
+  </script>
+</body>
+</html>
